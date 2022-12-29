@@ -44,13 +44,35 @@
             option.innerHTML = inst;
             select.appendChild(option);
            });
-         
+         var i5 = document.createElement("button");
+         i5.setAttribute("type","button");
+         i5.innerHTML = "Confirm";
+         i5.setAttribute("onclick","return test()");
+         f.appendChild(i5);
           }
             function remove_btn(el) {
                 var element = el;
                 element.remove();
             }
-            
+            function test(){
+        var x1 = document.getElementById("fname").value;
+        var x2 = document.getElementById("lname").value;
+        var x3 = document.getElementById("email").value;
+
+
+        if(x1 == "") {
+            alert("You must enter your first name");
+        return false ;}
+        else if (x2 ==""){
+            alert("You must enter your last name");
+            return false ;}
+        else if (x3 ==""){
+            alert("You must enter your email");
+            return false;
+        }
+        }
+        
+
     </script>
     <body>   
         <div class="contact">
